@@ -1,0 +1,21 @@
+lst=[1,3,7,2,-3]
+lst2=[]
+lst3=[]
+def expanding():
+    for i in range(1,len(lst)):
+        x=lst[i]-lst[i-1]
+        lst2.append(abs(x))
+    print(lst2)
+    for i in range(1,len(lst2)):
+        if lst2[i]>lst2[i-1]:
+            a="True"
+            lst3.append(a)
+        else:
+            b="False"
+            lst3.append(b)
+    if lst3.count("True")==1:
+        print("True")
+    else:
+        print("False")
+        
+expanding()
